@@ -1,7 +1,7 @@
 import json
 import re
 from app.createRepo import createrepo
-from llmapi import Chatbot #new
+#from llmapi import Chatbot #new
 
 
 with open("app/configtemplate.json", "r") as configfile:
