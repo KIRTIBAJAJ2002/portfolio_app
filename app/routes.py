@@ -12,7 +12,9 @@ from getimages import upload_resume
 router = APIRouter()
 
 @router.post("/upload/")
-async def upload_resume():
+async def upload_resume(resume_data: str):
+    formatted_data = format_data(resume_data)
+    return {"message": formatted_data}
     # Implement the logic to handle resume uploads
     # This route will trigger the processing of the uploaded resume,
     # which includes formatting the data and creating a GitHub repository
